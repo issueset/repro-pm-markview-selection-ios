@@ -19,5 +19,5 @@ However, [`isEquivalentPosition`](https://code.haverbeke.berlin/prosemirror/pros
 
 More specifically, this causes the following behavior:
 
-1. I cannot use `ArrowRight` to move the caret across the mark view.
-2. I get infinite `selectionchange` events when I long-press the iOS spacebar to move the caret.
+1. On macOS Chrome, I cannot press `ArrowRight` to move the caret across the mark view.
+2. On iOS Safari, I cannot long-press the spacebar to move the caret across the mark view.
