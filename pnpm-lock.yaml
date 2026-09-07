@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  prosemirror-view@1.42.3: f74f96cca26e8a1323ca33b73ab3cea873c784a9c473fb18e576afc36e49c8f2
+
 importers:
 
   .:
@@ -19,7 +22,7 @@ importers:
         version: 1.12.1
       prosemirror-view:
         specifier: 1.42.3
-        version: 1.42.3
+        version: 1.42.3(patch_hash=f74f96cca26e8a1323ca33b73ab3cea873c784a9c473fb18e576afc36e49c8f2)
     devDependencies:
       vite:
         specifier: ^8.2.2
@@ -708,13 +711,13 @@ snapshots:
     dependencies:
       prosemirror-model: 1.25.11
       prosemirror-transform: 1.12.1
-      prosemirror-view: 1.42.3
+      prosemirror-view: 1.42.3(patch_hash=f74f96cca26e8a1323ca33b73ab3cea873c784a9c473fb18e576afc36e49c8f2)
 
   prosemirror-transform@1.12.1:
     dependencies:
       prosemirror-model: 1.25.11
 
-  prosemirror-view@1.42.3:
+  prosemirror-view@1.42.3(patch_hash=f74f96cca26e8a1323ca33b73ab3cea873c784a9c473fb18e576afc36e49c8f2):
     dependencies:
       prosemirror-model: 1.25.11
       prosemirror-state: 1.4.4
