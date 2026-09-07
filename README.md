@@ -2,6 +2,12 @@
 
 
 
+
+
+
+
+
+
 # Caret flickers across a mark view with `contenteditable=false` child
 
 Online demo: https://issueset.github.io/repro-pm-markview-selection-ios/
@@ -25,7 +31,7 @@ More specifically, this causes the following behavior:
 
 1. On macOS Chrome, I cannot press `ArrowRight` to move the caret across the mark view.
 
-   https://github.com/user-attachments/assets/fac4e64a-8013-4943-8336-c3d35f1e7cb1
+   https://github.com/user-attachments/assets/13d34c1b-dcbd-45a7-94df-0dd8a4e0cd0f
 
 2. On iOS Safari, I cannot long-press the spacebar to move the caret across the mark view.
 
