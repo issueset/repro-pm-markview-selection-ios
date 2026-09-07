@@ -14,6 +14,8 @@ Online demo: https://issueset.github.io/repro-pm-markview-selection-ios/
 
 Source code: https://github.com/issueset/repro-pm-markview-selection-ios/
 
+Issue link: https://discuss.prosemirror.net/t/caret-flickers-across-a-mark-view-with-contenteditable-false-child/9075 
+
 A `mention` mark view renders a non-editable label followed by the editable source text:
 
 ```
