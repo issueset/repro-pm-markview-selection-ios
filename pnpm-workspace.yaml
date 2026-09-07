@@ -1,2 +1,4 @@
 allowBuilds:
   esbuild: false
+patchedDependencies:
+  prosemirror-view@1.42.3: patches/prosemirror-view@1.42.3.patch
