@@ -1,3 +1,7 @@
+
+
+
+
 # Caret flickers across a mark view with `contenteditable=false` child
 
 Online demo: https://issueset.github.io/repro-pm-markview-selection-ios/
@@ -20,4 +24,9 @@ However, [`isEquivalentPosition`](https://code.haverbeke.berlin/prosemirror/pros
 More specifically, this causes the following behavior:
 
 1. On macOS Chrome, I cannot press `ArrowRight` to move the caret across the mark view.
+
+   https://github.com/user-attachments/assets/fac4e64a-8013-4943-8336-c3d35f1e7cb1
+
 2. On iOS Safari, I cannot long-press the spacebar to move the caret across the mark view.
+
+   https://github.com/user-attachments/assets/8885a829-e593-4d3b-9ce9-ce87f153310e
