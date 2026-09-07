@@ -1,0 +1,14 @@
+diff --git a/dist/index.js b/dist/index.js
+index 012237dd813a21d86d6d527263b49c5af0a0e2f0..1046a37d09c9ea14bae0b07c4145bb1e285b9000 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -2494,7 +2494,8 @@ function nodeLen(node) {
+ }
+ function isIgnorable(dom, dir) {
+     let desc = dom.pmViewDesc;
+-    return desc && desc.size == 0 && (dir < 0 || dom.nextSibling || dom.nodeName != "BR");
++    return desc ? desc.size == 0 && (dir < 0 || dom.nextSibling || dom.nodeName != "BR")
++        : dom.nodeType == 1 && dom.contentEditable == "false";
+ }
+ function skipIgnoredNodes(view, dir) {
+     return dir < 0 ? skipIgnoredNodesBefore(view) : skipIgnoredNodesAfter(view);
