@@ -1,8 +1,20 @@
+
+
+
+
+
+
+
+
+
+
 # Caret flickers across a mark view with `contenteditable=false` child
 
 Online demo: https://issueset.github.io/repro-pm-markview-selection-ios/
 
 Source code: https://github.com/issueset/repro-pm-markview-selection-ios/
+
+Issue link: https://discuss.prosemirror.net/t/caret-flickers-across-a-mark-view-with-contenteditable-false-child/9075 
 
 A `mention` mark view renders a non-editable label followed by the editable source text:
 
@@ -20,4 +32,9 @@ However, [`isEquivalentPosition`](https://code.haverbeke.berlin/prosemirror/pros
 More specifically, this causes the following behavior:
 
 1. On macOS Chrome, I cannot press `ArrowRight` to move the caret across the mark view.
+
+   https://github.com/user-attachments/assets/13d34c1b-dcbd-45a7-94df-0dd8a4e0cd0f
+
 2. On iOS Safari, I cannot long-press the spacebar to move the caret across the mark view.
+
+   https://github.com/user-attachments/assets/8885a829-e593-4d3b-9ce9-ce87f153310e
