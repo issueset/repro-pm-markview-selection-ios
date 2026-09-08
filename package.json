@@ -1,6 +1,7 @@
 {
   "name": "pm-mark-view-selection-repro",
   "private": true,
+  "packageManager": "pnpm@11.25.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
