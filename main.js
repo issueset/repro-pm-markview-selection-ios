@@ -3,9 +3,9 @@ import { EditorState } from 'prosemirror-state'
 import { EditorView } from 'prosemirror-view'
 
 const params = new URLSearchParams(location.search)
-// ?debug=1 (also a checkbox on the page): pretend prosemirror-view had the
-// proposed `ignoreForSelection` option, by setting the private field it already
-// reads for `relaxedSide` widgets on the label element.
+// ?debug=1 (also a checkbox on the page): mark the label with
+// `data-pm-ignore-selection`, which the patched prosemirror-view in this repo
+// treats like a `relaxedSide` widget when comparing DOM selection positions.
 const debug = params.get('debug') === '1'
 
 const schema = new Schema({
@@ -48,7 +48,7 @@ function mentionView(mark) {
   contentDOM.setAttribute('data-content-dom', '')
 
   dom.append(label, contentDOM)
-  if (debug) label.pmViewDesc = { ignoreForSelection: true }
+  if (debug) label.setAttribute('data-pm-ignore-selection', '')
   return { dom, contentDOM }
 }
 

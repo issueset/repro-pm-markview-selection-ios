@@ -1,0 +1,26 @@
+diff --git a/dist/index.cjs b/dist/index.cjs
+index 6ee53e1db4c61e2eeca5617e84cb16ce8b4730a0..f4a1a1958308cc7e1f02f49a2d9227b305cf5a85 100644
+--- a/dist/index.cjs
++++ b/dist/index.cjs
+@@ -61,7 +61,7 @@ function scanFor(node, off, targetNode, targetOff, dir) {
+     } else if (node.nodeType == 1) {
+       var child = node.childNodes[off + (dir < 0 ? -1 : 0)];
+       if (child.nodeType == 1 && child.contentEditable == "false") {
+-        if ((_a = child.pmViewDesc) === null || _a === void 0 ? void 0 : _a.ignoreForSelection) off += dir;else return false;
++        if (((_a = child.pmViewDesc) === null || _a === void 0 ? void 0 : _a.ignoreForSelection) || child.hasAttribute("data-pm-ignore-selection")) off += dir;else return false;
+       } else {
+         node = child;
+         off = dir < 0 ? nodeSize(node) : 0;
+diff --git a/dist/index.js b/dist/index.js
+index 012237dd813a21d86d6d527263b49c5af0a0e2f0..2f47c55c6eb0f7b9b170f8d15bbbe3f0f2f104ee 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -50,7 +50,7 @@ function scanFor(node, off, targetNode, targetOff, dir) {
+         else if (node.nodeType == 1) {
+             let child = node.childNodes[off + (dir < 0 ? -1 : 0)];
+             if (child.nodeType == 1 && child.contentEditable == "false") {
+-                if ((_a = child.pmViewDesc) === null || _a === void 0 ? void 0 : _a.ignoreForSelection)
++                if (((_a = child.pmViewDesc) === null || _a === void 0 ? void 0 : _a.ignoreForSelection) || child.hasAttribute("data-pm-ignore-selection"))
+                     off += dir;
+                 else
+                     return false;
